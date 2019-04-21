@@ -1,0 +1,191 @@
+*{
+  padding: 0;
+  margin: 0;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+
+@keyframes initialmove {
+  0%   {right: -500px;}
+  50%  {right:    0px; height: 100%;}
+  100% {right:    0px; height: 0%;}
+}
+
+@keyframes contentmove {
+  0%   {width: 100%;}
+  100% {width: 75%}
+}
+
+@keyframes coloranimered {
+  0%   {background-color:  white;}
+  100% {background-color:  red;}
+}
+
+@keyframes coloranimegreen {
+  0%   {background-color:  white;}
+  100% {background-color:  red;}
+}
+@keyframes coloranimetur {
+  0%   {background-color:  white;}
+  100% {background-color:  turquoise;}
+}
+
+@keyframes initialup {
+  0%   {height: 100%;}
+  50%  {height: 50%;;}
+  100% {height: 0%;}
+}
+@keyframes skrtleft {
+  0%   {left: 100%;}
+  100% {left: 25%;}
+}
+@keyframes hoverEffect {
+  0%   {left: 25%;}
+  100% {left: : 10%;}
+}
+@keyframes radiusImg {
+  0%   {border-bottom-right-radius: 0px;}
+  100% {border-bottom-right-radius: 1300px;}
+}
+#container{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background-image: url("indian.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#mainContent{
+  position: absolute;
+  background-color:  black;
+  width: 100%;
+  height:100%;
+  bottom: 0%;
+  top: 0%;
+  left: 0%;
+  animation-name: contentmove, radiusImg;
+  animation-duration: 3s, 1.5s;
+  animation-delay: 0s, 5s;
+  animation-fill-mode: forwards;
+  z-index: 100;
+  border-bottom-right-radius: 0px;
+  box-shadow: 2px 2px 3px white;
+}
+
+#mainContent header{
+  color: white;
+  font-family: Monospace;
+  font-weight: bold;
+  font-size: 36px;
+  padding-left: 25px;
+  padding-top: 25px;
+  background-color: #333;
+}
+
+#mainContent p{
+  font-family: Monospace;
+  color: white;
+  width: 50%;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+#sidebar1{
+  position: absolute;
+  background-color:  red;
+  bottom: 33.33%;
+  right: 0;
+  top: 0%;
+  width: 25%;
+  height: 33.33%;
+  animation-name: coloranimered;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#sidebar1:hover{
+  -webkit-filter: blur(2px);
+}
+#removeScrollbar{
+  overflow: auto;
+}
+#box{
+  position: absolute;
+  font-family: monospace;
+  color: black;
+  font-weight: bold;
+  font-size: 65px;
+  top: 30%;
+  left: 110%;
+   border: 2px solid black;/*#ff9933 */
+  background-color: white;
+  width: 85%;
+  text-align: center;
+  line-height: 85px;
+  -webkit-transform: rotate(-25deg);
+  animation-name: skrtleft;
+  animation-duration: 2s;
+  mix-blend-mode: lighten;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  z-index: 4px;
+  overflow: hidden;
+}
+
+
+#sidebar2{
+  position: absolute;
+  background-color:  green;
+  right: 0;
+  bottom: 33.33%;
+  top: 33.33%;
+  width: 25%;
+  height: 33.33%;
+  animation-name: coloranimegreen;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#sidebar2:hover{
+  -webkit-filter: blur(2px);
+}
+
+#sidebar3{
+  position: absolute;
+  background-color:  turquoise;
+  right: 0;
+  bottom: 0%;
+  top: 66.66;
+  width: 25%;
+  height: 33.33%;
+  animation-name: coloranimetur;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#sidebar3:hover{
+  -webkit-filter: blur(2px);
+}
+
+
+#transitionBox{
+  position: absolute;
+  background-color:  white;
+  right: -500px;
+  top: 0%;
+  bottom: 0;
+  width: 25%;
+  animation-name: initialmove;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-in-out;
+}
